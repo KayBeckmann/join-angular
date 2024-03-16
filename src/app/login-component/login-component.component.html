@@ -1,1 +1,76 @@
-<p>login-component works!</p>
+<div class="wrapper">
+  <div class="login-content center" id="login">
+    <h1 class="center">Log in</h1>
+    <hr id="hr" />
+    <form class="form center-column" onsubmit="return false">
+      <div class="login-input-bars">
+        <div class="input-login input-bar">
+          <input
+            required
+            type="email"
+            placeholder="Email"
+            id="email"
+            class="pointer"
+          />
+          <img src="./assets/img/icons/icon-email.svg" />
+        </div>
+        <div class="input-alert-box">
+          <div id="signin-alert-user" class="input-alert display-none">
+            User unknown
+          </div>
+        </div>
+        <div class="input-login input-bar">
+          <input
+            required
+            type="password"
+            placeholder="Password"
+            minlength="5"
+            id="password"
+            class="pointer"
+          />
+          <img
+            id="signin-password-icon"
+            src="./assets/img/icons/icon-password.svg"
+            class="pointer"
+            (click)="swapPassword()"
+          />
+        </div>
+        <div class="input-alert-box">
+          <div id="signin-alert" class="input-alert display-none">
+            Wrong Password
+          </div>
+        </div>
+      </div>
+      <div class="login-content-pw center-column">
+        <a (click)="passwordReset()" class="font-lightblue"
+          >Forgot my password</a
+        >
+        <div class="flex gap">
+          <input
+            class="unset-width pointer"
+            type="checkbox"
+            name="Remember me"
+            id="rememberme"
+          />
+          <label for="rememberme">Remember me</label>
+        </div>
+      </div>
+      <div class="login-btns">
+        <button
+          id="btn-login"
+          class="btn-login font-21 bold pointer"
+          onclick="signIn()"
+        >
+          Log in
+        </button>
+        <button
+          id="btn-login-guest"
+          class="btn-login font-21 bold pointer"
+          (click)="redirectToSignup()"
+        >
+          Guest Log in
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

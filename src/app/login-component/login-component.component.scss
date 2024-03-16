@@ -1,0 +1,38 @@
+.wrapper {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--white);
+  border-radius: var(--border-radius-xl);
+  height: 60vh;
+  width: 80vw;
+  padding: 35px 28px;
+  box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+}
+
+.form {
+  height: 100%;
+}
+
+.login-input-bars {
+  padding-bottom: 5%;
+}
+
+.input-bar {
+  height: 51px;
+}
+
+.input-login {
+  display: flex;
+  z-index: 1;
+}
